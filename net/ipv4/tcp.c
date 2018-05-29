@@ -452,6 +452,9 @@ void tcp_init_sock(struct sock *sk)
 	sk->sk_sndbuf = sock_net(sk)->ipv4.sysctl_tcp_wmem[1];
 	sk->sk_rcvbuf = sock_net(sk)->ipv4.sysctl_tcp_rmem[1];
 
+	if (sock_net(sk)->ipv4.sysctl_tcp_keepalive_always)
+		sock_set_flag(sk, SOCK_KEEPOPEN);
+
 	sk_sockets_allocated_inc(sk);
 	sk->sk_route_forced_caps = NETIF_F_GSO;
 }

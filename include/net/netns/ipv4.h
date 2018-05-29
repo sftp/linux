@@ -118,6 +118,7 @@ struct netns_ipv4 {
 	int sysctl_tcp_keepalive_time;
 	int sysctl_tcp_keepalive_probes;
 	int sysctl_tcp_keepalive_intvl;
+	int sysctl_tcp_keepalive_always;
 
 	int sysctl_tcp_syn_retries;
 	int sysctl_tcp_synack_retries;

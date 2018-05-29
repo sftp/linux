@@ -772,6 +772,13 @@ static struct ctl_table ipv4_net_table[] = {
 		.proc_handler	= proc_dointvec_jiffies,
 	},
 	{
+		.procname       = "tcp_keepalive_always",
+		.data           = &init_net.ipv4.sysctl_tcp_keepalive_always,
+		.maxlen         = sizeof(int),
+		.mode           = 0644,
+		.proc_handler   = proc_dointvec,
+	},
+	{
 		.procname	= "tcp_syn_retries",
 		.data		= &init_net.ipv4.sysctl_tcp_syn_retries,
 		.maxlen		= sizeof(int),

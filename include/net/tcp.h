@@ -151,6 +151,7 @@ void tcp_time_wait(struct sock *sk, int state, int timeo);
 #define TCP_KEEPALIVE_TIME	(120*60*HZ)	/* two hours */
 #define TCP_KEEPALIVE_PROBES	9		/* Max of 9 keepalive probes	*/
 #define TCP_KEEPALIVE_INTVL	(75*HZ)
+#define TCP_KEEPALIVE_ALWAYS	0
 
 #define MAX_TCP_KEEPIDLE	32767
 #define MAX_TCP_KEEPINTVL	32767
